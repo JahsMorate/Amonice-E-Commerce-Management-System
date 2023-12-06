@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Amonica.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin Panel</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../AdminCSS/AdminMasterPage/bootstrap.min.css" rel="stylesheet" />
+    <script src="../AdminCSS/AdminMasterPage/bootstrap.min.js"></script>
+    <link href="../AdminCSS/AdminMasterPage/boxicons.min.css" rel="stylesheet" />
+    <script src="../AdminCSS/AdminMasterPage/popper.min.js"></script>
+    <link href="../assets/css/searchbar.css" rel="stylesheet" />
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="../fontAwesome/css/all.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <div>
+                <header class="header">
+                    <div class="header__container">
+                        <span style="color: white;">s</span>
+                        <a href="#" class="header__logo">Administrator</a>
+                        <div class="header__toggle">
+                            <i class='bx bx-menu' id="header-toggle"></i>
+                        </div>
+                    </div>
+                </header>
+                <div class="nav" id="navbar">
+                    <nav class="nav__container">
+                        <div>
+
+                            <center>
+                                <a href="#">
+                                    <%--  image here--%>
+                                </a>
+                                <div>
+                                    <span class="nav__logo-name"><b>Admin Panel
+                                    </b></span>
+                                </div>
+                            </center>
+                            <br />
+
+
+                            <div class="nav__list">
+                                <div class="nav__items">
+
+                                    <small><span style="font-size: 13px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
+                                            <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z" />
+                                        </svg>
+                                        Pages</span></small>
+                                    <a href="Adminhomepage.aspx" class="nav__link active">
+
+                                        <span class="nav__icon" style="width: 22px;">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC7UlEQVR4nO2WTUwTQRTH68GLiSe9efHmyRM3YtLQ3Z0tC/2iFSQKkQjWVCAgZRMJCcEGJcWUmBCMJz3JTW9iYtBg6nY/WigU0FJIoymBgIoVaIsffWbWtLprGyyWg0lf8k82M/Peb+btmw+N5n8yTqc7Ier14yJNT/i02pMHDvSXlR3mKeq6D6GdZYcjvey4muYRncBtuO9AoD6SPCNQKDpdW7e76XJBcnhYVnxgAGbq63d5hGKvSJIoGtCv1R4XaHpMZJjkGstmYaGGRphraJS/cRvuExgmJSD0UCCIY/sGgkZziKOoSwJFxcPNLd+2h4Yg4fFAtLUVBIMRZh+MyRKMRoi2tsl9eEy4ueU7j9AWR5LNOEZBUG9FxSmepsWA2ZL60Ncnr2ijtxcCtrMwfY2FN8trEPkMssLRDZjuc0GgxgrrPT3y2I/9/TBVY90VEJrhSPL03mmtrj4iIDQgIDrxtq09La/C7YZwy2UQrVaYfzqZBao1P8GBVFsHC01NsDU4CEmPB2JdXSDo9Umeou56y8uP5oRyOp2BR2h97vyFLxnHFacTRKMJgrfvwOJ6Ii80o8X3KZi9dx9EgxHetbf/TL/bDQsXm77yCG1yBNGogAp6/TOp2pDE6cykKniuHgJ2B7yei+4JVAv7YF8cA8fK/CrJYEhhVhbsI4hscSzZ7SCazBB69AQi8XTB0KziaQg9HgfRbIYl+xU5NmZglgKMt4NkMkHwxk1YXInvH6hOf+wTBF23QDKZYZVl/wS/MNlg3jtVNKBaC0IInlvqlGBOp2PZkfwVWyyxI5OAWYoCc4568zrgWRaifHGco95fq/1bcOZs3kslcKSUarWViitS2k7DyoMC3zRYRTlAnCrlO7lWu7shYLOB32KBWGenYgK/g3PF1BRiGbAMrKraEWk6yBEEiZ+8Ik37xMrK7VhHh/xUUtw+/2o+ggA/w+yICAU4ktSq+3GbiJAkMcxWscEvcwFzTQCPLRr4IOwHKSFYXnQ/xFwAAAAASUVORK5CYII=">
+                                        </span>
+                                        <span class="nav__name">Home</span>
+                                    </a>
+                                    <a href="Orderlist.aspx" class="nav__link active">
+                                        <span class="nav__icon" style="width: 22px;">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACzUlEQVR4nMXWXU/TUBgH8GLkG0gw8U4v/AjeG4hRb70xurGuPWVoYtDB1lM6ysvc2BjthkaytVvbCGRk4MuEMEAMBDEhGqNwo6LAjRdGiZEwITB3TDGaoLLSDcY/eW76nJxfcp62ORh2kCGVhoBFcmYA70YACp8omo/iMFS273BV1LmuvuxDFoleu1LnPwqg0AVo4TnHcYf3FSYU6Ndwq0L7fj1BJRTkpwDNV2DFDkUL1wAUmooO477WRsLt3cRl+MYqw6RJdLRVifWUKVpXgUfp4xjCSvYHbm8+BRoDWflFHHVOxdDNkdsZxz1fuqabW9VeREvUuQYUZgGo7DghM0GTVG+7LDoqzeG6E1SYKs0b5jjuEGA7soNvU2h0afyfGpxPofjsfSTO9CBhQkLNw8F1e8LzjVLZVbPoQJaYM00o8B2pMENmyenbdlp6Ac3+7+Jk/L9wrhp6P4Licw+QNNOLhIkoahnu/GFPeNJAbVizxOiP+rDXO+/ui+hCv6O3LjgZRUBm4row4XUn7HeCmb2CHQO+dJVUf0kXxv3uWpsnsLkXcGrhMbLE6A2zcv2YLmwV2JPAFcjmwnbK3+t7Xw8gUmH05/tnzq5AdmDuUcEwPyEioDaou4db2lZujd4t+KjtCW/aHHFc2DVMedpmuZ6uguDUojZf58bF8I0ju4atXrdSG+IzhcDdr/oRqbJLmJEQ7a24zd2u+0nlqsCTiDbfsDFYhOXA1YFSi2N5ocMfxtDVnqa0KeI4gxkN6QpsAon9SirMcq6yKsxnqwy3lSVGr+AyVLR/v2GYgnw/6eRPY8UOgEKTdjEoOlwNg5UUFEaKDlNUuFS7/AGa9xMwWF5UHIehMkDz0tb1FwrIaGF7kRqGP1/Dhpa1qmaD54z28462oZJ8hpSH08jGdn4x2s872sZqchrJyac7wrn6WL7Rjk/bcKsY4azR/oHmJxgkIpr+Q1inAAAAAElFTkSuQmCC">
+                                        </span>
+                                        <span class="nav__name">Order</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+
+
+                            <asp:LinkButton ID="BtnLogout" OnClick="BtnLogout_Click" CausesValidation="false" CssClass=" nav__icon nav__link pt-3" Style="color: #58555e;" runat="server">
+                                   <span class="nav__icon" style="width: 22px;">
+                                       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADkUlEQVR4nM1XS0sbURROf0gfdN/adlkpZh73DmbR0hazSFxFSMCgyVoX2vgCBReCK/+CO0UwiiBtzMzE906qC2O0oqUJGuNkkskt5w5GzdxJJmKhFw6ZzD33fDnfPa+4XP/7SgjCWwWhERXjLRWh46QgFEHgWcF4U0ZoGHQeBYy4XE+SgvBVEcXMuiRdHHR06GeBAMkGg+QqHKaSDYUIvDvwevUNSbpQRPEoyXFfHgyabGt7oWK8u+XxXJ53dZHrnh5HArpwRkFo57soPmsKVOb5DzJC2SO/33AKWCtpv99QMM6tud2tjkEVUcz/bsJLW+8DAQK2GoInOO65glDOCbU3q5EeOAA2VUF4aRtIcKdHnZ2O6HUKXKUdoW0mMEQvBAXzcDRK9JmZ+sCRCNFnZ+kny8aWx3O5xvOfLd5CyjApjkaJsbdHSKVCipOTtsCluTn6vbyzwwQ/h/tGKH0PeI3n30Gesn5paWmJGqzkcqQ4MWELXJyaIpWrK/quFI8zvV6XpEuZ41qqwFCRoDjUKmqDg4SUy4ToOtHGxhreMYADM3BGi8UswAdery4LwnAVOIXxJlQfi7fLy6YHS0uOg6usqrZenwUCRMV4owqsIvQrFwpZFI1MhhrRRkcdAxenp82ryWQse9lgEO755LZoCIKWD4ctipV8nhDDINe9vY6Btf5+c0PTLHv5cJgA1n3g7m4rMARLqcQEthOtr68+sChe3w2uEybV6bRpgxEodkIDDKg+PbVSHQoB1ceNgyseNwNlft4xcDmRMM+srDCDK4Xx+i3VCA3ve73WdIrFzHQqFIg2MNDY2/FxU98mnX52dOgKQt+qwD8QegNNnGXsxmugDvLa9m7HxmiRod4uLjJ1UpJ0uSaKr+5VLyhnzJIZiRBjd9cMmEKBlBYWiDY0VN2DVKP5rutUBXRZwXgGJRPjQ0uTgAK+1d7ObhKRiOm5YVTTiD7XfKee2jSJTY8nn+S4j8wOBeMKtDBbOkdGSHl1ldIOHlYKBVpkoLJVWWDIoc9npBDadNktmJFkGAQYEf5QgUFAFsWsivFTW2BKudvdCuNKMwOenYANsJXguPd1Qe+BI/Qn3dlZfiho2uejw55j0Jr5a5uOt01QD9ELgQR32pDeeguiHVINmvj+zUAfCtG6m78z0MMe5CmkjOx2f3I91pI5rgWauILxBvxtgcYCArUX3smiOJTk+dePBviv1l+UKyd3w+LO5wAAAABJRU5ErkJggg==">
+                                   </span>
+                                     
+                                <span class="nav__name">Log Out</span>
+                            </asp:LinkButton>
+
+                        </div>
+                    </nav>
+                </div>
+
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</body>
+</html>

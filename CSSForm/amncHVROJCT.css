@@ -1,0 +1,338 @@
+﻿#move01 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move01:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+#move02 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move02:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move03 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move03:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move04 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move04:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move05 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move05:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move06 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move06:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move07 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move07:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move08 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move08:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move09 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move09:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move10 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move10:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move11 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move11:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move12 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move12:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move13 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move13:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move14 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move14:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+
+#move15 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move15:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+#move16 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move16:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+#move17 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move17:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+
+#move18 {
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease;
+}
+
+    #move18:hover {
+        top: -10px; /* or any distance you want the element to move */
+        transform: scale(1.1); /* or any scale you want to apply on hover */
+    }
+#amncitms:hover {
+    border-color: #4834d4;
+    
+    border: 2px solid #4834d4;
+    top: -10px; /* or any distance you want the element to move */
+    transform: scale(1.0); /* or any scale you want to apply on hover */
+}
+/* From uiverse.io by @satyamchaudharydev */
+/* this button is inspired by -- whatsapp input */
+/* == type to see fully interactive and click the close buttom to remove the text  == */
+
+.form {
+    --input-bg: #FFf;
+    /*  background of input */
+    --padding: 1.5em;
+    --rotate: 80deg;
+    /*  rotation degree of input*/
+    --gap: 2em;
+    /*  gap of items in input */
+    --icon-change-color: #15A986;
+    /*  when rotating changed icon color */
+    --height: 40px;
+    /*  height */
+    width: 200px;
+    padding-inline-end: 1em;
+    /*  change this for padding in the end of input */
+    background: var(--input-bg);
+    position: relative;
+    border-radius: 4px;
+}
+
+    .form label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: var(--height);
+    }
+
+    .form input {
+        width: 1000%;
+        padding-inline-start: calc(var(--padding) + var(--gap));
+        outline: none;
+        background: none;
+        border: 0;
+    }
+    /* style for both icons -- search,close */
+    .form svg {
+        /* display: block; */
+        color: #111;
+        transition: 0.3s cubic-bezier(.4,0,.2,1);
+        position: absolute;
+        height: 15px;
+    }
+/* search icon */
+.icon {
+    position: absolute;
+    left: var(--padding);
+    transition: 0.3s cubic-bezier(.4,0,.2,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* arrow-icon*/
+.swap-off {
+    transform: rotate(-80deg);
+    opacity: 0;
+    visibility: hidden;
+}
+/* close button */
+.close-btn {
+    /* removing default bg of button */
+    background: none;
+    border: none;
+    right: calc(var(--padding) - var(--gap));
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    padding: 0.1em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+}
+
+.form input:focus ~ .icon {
+    transform: rotate(var(--rotate)) scale(1.3);
+}
+
+    .form input:focus ~ .icon .swap-off {
+        opacity: 1;
+        transform: rotate(-80deg);
+        visibility: visible;
+        color: var(--icon-change-color);
+    }
+
+    .form input:focus ~ .icon .swap-on {
+        opacity: 0;
+        visibility: visible;
+    }
+
+.form input:valid ~ .icon {
+    transform: scale(1.3) rotate(var(--rotate))
+    
+}
+
+    .form input:valid ~ .icon .swap-off {
+        opacity: 1;
+        visibility: visible;
+        color: var(--icon-change-color);
+    }
+
+    .form input:valid ~ .icon .swap-on {
+        opacity: 0;
+        visibility: visible;
+    }
+
+.form input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0s;
+}
+

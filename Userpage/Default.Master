@@ -1,0 +1,334 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Amonica.Userpage.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Amonica</title>
+    <link href="../AMNCIMG/AMNCDIMG/AMNCDWBIMG/AmonicaLogo.png" rel="icon" />
+    <%--BS5 Start--%>
+    <link href="../AMNCBS5/bootstrap.min.css" rel="stylesheet" />
+    <script src="../AMNCBS5/bootstrap.min.js"></script>
+    <script src="../AMNCBS5/popper.min.js"></script>
+    <%--BS5 End--%>
+
+    <%--CSS Main Start--%>
+    <link href="../CSSForm/MainCSS.css" rel="stylesheet" />
+    <%--CSS Main End--%>
+
+    <%--FontAwesome Start--%>
+    <link href="../fontAwesome/css/all.css" rel="stylesheet" />
+    <%--FontAwesome End--%>
+
+    <!--This is For Applicable For Mobile Start-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This is For Applicable For Mobile End-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav style="background-color: #5555dd;">
+            <div class="container nav">
+                <ul class="nav m-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-1 text-white" href="#">
+                            <small>Seller Center</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <label class="nav-link p-1 text-white" href="#">
+                            <small>|</small>
+                        </label>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1 text-white" href="#">
+                            <small>About Us</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <label class="nav-link p-1 text-white" href="#">
+                            <small>|</small>
+                        </label>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-1 text-white" href="#">
+                            <small>Help Center</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <label class="nav-link p-1 text-white" href="#">
+                            <small>|</small>
+                        </label>
+                    </li>
+                    <li class="nav-item">
+                        <label class="nav-link p-1 text-white">
+                            <small>Follow us on </small>
+                            <a class=" text-white p-0" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                            </a>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg amnc-nav">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="../AMNCIMG/AMNCDIMG/AMNCDWBIMG/mainLogo.png" />
+
+                </a>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z" />
+                    </svg>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="nav m-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link p-1  text-white" href="Sellerverification.aspx">
+                                <small>Sell on <span style="color: #f39c12; font-weight: bolder;">Amonica</span></small>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <asp:LinkButton ID="LnkSingup" CausesValidation="false" OnClick="LnkSingup_Click" CssClass="nav-link p-1 text-white" runat="server">  <small>Sign Up</small></asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <asp:LinkButton ID="LnkLogin" CausesValidation="false" OnClick="LnkLogin_Click" CssClass="nav-link p-1 text-white" runat="server">   <small>Sign In</small></asp:LinkButton>
+
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto justify-content-end">
+                        <li class="nav-item">
+                            <asp:Repeater ID="Rprofile" runat="server">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="Profile" CausesValidation="false" OnClick="Unnamed_Click" CssClass="nav-link" runat="server">
+                                    <span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                </svg>
+                                     </span> <%# Eval("email") %>
+                                    </asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:Repeater>
+
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="LnkLogout" CausesValidation="false" OnClick="LnkLogout_Click" CssClass="nav-link" Visible="false" runat="server">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            </asp:LinkButton>
+
+                        </li>
+                        <li class="nav-item">
+
+                            <div class="pl-0 m-0" style="display: inline-block; height: 38px; width: 40px; position: relative; margin: 0 0 0 20px;">
+
+                                <a href="Cart.aspx">
+                                    <asp:LinkButton ID="LnkCart" CausesValidation="false" OnClick="LnkCart_Click" runat="server" Style="background-size: cover; width: 29px; height: 26px; left: 50%; top: 50%; margin: -12px 0 0 -14px; position: absolute;">
+                                             <i class="fa-solid fa-cart-shopping text-white" ></i>
+                                    </asp:LinkButton>
+
+                                    <span style="position: absolute; background: #f36e36; color: #fff; top: -10px; font-weight: 400; right: -9px; text-align: center; border: 3px solid #f36e36; font-size: 13px; min-width: 14px; line-height: 14px; border-radius: 50%;">
+
+                                        <%--This is for that cart --%>
+                                        <asp:Repeater ID="Rcart" runat="server">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblTotalcart" CssClass="badge m-0" Style="font-size: 12px;" Text='<%# Eval("TotalCart") %>' runat="server" />
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                        <%--This is for that cart --%>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <%--  <div id="loader">
+                <img src="../AMNCIMG/AMNCPreloader/AmonicaPreloader.gif" />
+            </div>--%>
+            <%--This is for navigation Start--%>
+
+            <%--This is for navigation End--%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+        <div class="full-footer">
+            <div class="container-fluid" style="border-top: 5px solid #686de0;">
+            </div>
+            <div class="container-fluid">
+                <div class="row pt-5 pb-5">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="container" style="color: #f5f6fa;">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-12 ">
+                                    <div>
+                                        <span class="text-secondary">
+                                            <b>Company Description</b>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <img src="../Amonica/Image/Logo/amonicamainlogofinal.png" width="150" />
+                                        </span>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small><i class="fa-solid fa-location-dot text-danger"></i>Brgy. Bioto Tandag City Surigao Del Sur</small>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 ">
+                                    <div>
+                                        <span class="text-secondary">
+                                            <b>Company Member</b>
+                                        </span>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small><span style="font-weight: 600;">Founder</span>: Jahs C. Morate</small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small><span style="font-weight: 600;">CEO</span>: John Paul L. Castañares</small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small><span style="font-weight: 600;">System Desinger</span>: Mel Niño Espinoza</small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small><span style="font-weight: 600;">Programmer</span>: Joshua Bartolome</small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small><span style="font-weight: 600;">Business Analysts</span>: Fernando Comparativo</small>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 text-center">
+                                    <div>
+                                        <span class="text-secondary">
+                                            <b>Categories</b>
+                                        </span>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Womens Appeal
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Womens Bag
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Womens Accessories
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Gloceries
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Womens Appeal
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Baby & Kids
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Home & Living
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Home & Entertainment
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Mobile & Gadge
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Mobile Accesories
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Toy & Kids
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Mens Shoes
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Makeup
+                                        </small>
+                                    </div>
+                                    <div class="text-dark">
+                                        <small>Laptop & Computer
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 ">
+                                    <div>
+                                        <span class="text-secondary">
+                                            <b>Mode of Payment</b>
+                                        </span>
+                                    </div>
+                                    <div class="text-dark text-center">
+                                        <i class="fa-solid fa-truck" style="color: #686de0;"></i>
+                                        <small>Cash on Delivery</small>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <center>
+                                            <span class="text-secondary">
+                                                <b>Quotes</b>
+                                            </span>
+                                        </center>
+                                    </div>
+                                    <div class="text-dark">
+                                        <span class="text-success">
+                                            <b>"Great companies are built on great products." </b>
+                                        </span>
+                                        <div class="text-dark">
+                                            <b>-Elon Musk</b>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
